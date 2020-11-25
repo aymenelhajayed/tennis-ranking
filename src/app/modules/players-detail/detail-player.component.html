@@ -1,0 +1,16 @@
+<div *ngIf="player" >
+  <h2>{{ player.lastname}} {{ player.firstname}}</h2>
+  <ul>
+    <li><strong>Shortname :</strong> {{ player.shortname}} </li>
+    <li><strong>Sex :</strong> {{ player.sex}}</li>
+    <li><strong>Country :</strong></li>
+    <img [src]="player.country.picture" class="mr-2" style="width: 20px">
+    {{ player.country.code }}<li><strong>picture :</strong>
+  </li>
+    <li><strong>Rank :</strong>  {{ player.data.rank}}</li>
+    <li><strong>Points :</strong>  {{ player.data.points}}</li>
+    <li><strong>Weight :</strong>  {{ player.data.weight}}</li>
+    <li><strong>Height :</strong>  {{ player.data.height}}</li>
+    <li><strong>Age :</strong>  {{ player.data.age}}</li>
+  </ul>
+</div>

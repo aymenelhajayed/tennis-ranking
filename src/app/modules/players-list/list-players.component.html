@@ -1,0 +1,27 @@
+<h2>List of players </h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Rank</th>
+    <th scope="col">Country</th>
+    <th scope="col">Player</th>
+    <th scope="col">points</th>
+    <th scope="col">age</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let player of players; index as i">
+    <th scope="row">{{ player.data.rank | number}}</th>
+    <td>
+      <img [src]="player.country.picture" class="mr-2" style="width: 20px">
+      {{ player.country.code }}
+    </td>
+    <td><a [routerLink]="['/player-detail', player.id]">
+      {{ player.lastname}} {{ player.firstname}}
+    </a></td>
+    <td>{{ player.data.points | number }}</td>
+    <td>{{ player.data.age | number }}</td>
+  </tr>
+  </tbody>
+</table>
